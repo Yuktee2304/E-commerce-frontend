@@ -21,7 +21,7 @@ const Productlist = () => {
 
   const deleteProduct = async (id) => {
     console.log(id);
-    let result = await fetch(`https://e-commerce-backend-o0vx.onrender.com//deleteProducts/${id}`, {
+    let result = await fetch(`https://e-commerce-backend-o0vx.onrender.com/deleteProducts/${id}`, {
       method: "DELETE",
       headers:{
         authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`
@@ -42,7 +42,7 @@ const Productlist = () => {
     let searchData = e.target.value;
     if (searchData) {
       let result = await fetch(
-        `https://e-commerce-backend-o0vx.onrender.com//searchProducts/${searchData}`,{
+        `https://e-commerce-backend-o0vx.onrender.com/searchProducts/${searchData}`,{
           headers:{
             authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`
             }
