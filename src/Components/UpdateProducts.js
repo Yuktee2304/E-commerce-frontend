@@ -28,7 +28,7 @@ const UpdateProducts = ()=>{
     }
 
     const updateProductsData=async()=>{
-    let result = await fetch(`https://e-commerce-backend-o0vx.onrender.com//updateProducts/${params.id}`,{
+    let result = await fetch(`https://e-commerce-backend-o0vx.onrender.com/updateProducts/${params.id}`,{
         method:"PUT",
         body:JSON.stringify({name,price,category,company}),
         headers:{
